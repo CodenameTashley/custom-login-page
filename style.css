@@ -1,0 +1,94 @@
+/* 
+    Author: Tashley Toocaram
+    Website: https://codenametashley.github.io
+    Company: CHB Technologies Ltd
+    Company Website: https://www.chb-technologies.mu/
+ */
+
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --start-gradient: #212E3B;
+    --end-gradient: #ADD8E6;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(var(--start-gradient), var(--end-gradient));
+}
+
+body header {
+    height: 10vh;
+    width: 100vw;
+}
+
+body footer {
+    height: 25vh;
+    width: 100vw;
+}
+
+body footer #company-name {
+    height: 10vh;
+    width: 100vw;
+    background-color: #212E3B;
+}
+
+#company-name img {
+    min-height: 100%;
+    width: auto;
+}
+
+#main {
+    height: 65vh;
+    width: 100vw;
+}
+
+#hexagon-wrapper {
+    width: 50vh;
+    height: 50vh;
+
+    text-align: center;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#hexagon-wrapper div {
+    background-color: #efefef;
+}
+
+.hexagon {
+    height: 100%;
+    width: calc(100% * 0.57735);
+    display: inline-block;
+}
+
+.hexagon:before {
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: '';
+    transform: rotateZ(60deg);
+    
+}
+
+.hexagon:after {
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: '';
+    transform: rotateZ(-60deg);
+    
+}
